@@ -1,0 +1,18 @@
+<div class="dashboard">
+  <h1>Financial Comparison Dashboard</h1>
+  <div>
+    <label for="datePeriod">Select a duration for corresponding Price data:</label>
+  <select name="datePeriod" id="datePeriod" (change)="selectDate($event.target.value)">
+    <option value="currentPrice">Current</option>
+    <option value="price1MonthAgo">1 Month Ago</option>
+    <option value="price6MonthsAgo">6 Months Ago</option>
+    <option value="price1YearAgo">1 Year Ago</option>
+    <option value="price5YearsAgo">5 Years Ago</option>
+  </select>
+  <br/>
+  </div>
+  <hr/>
+  <app-grid [data]="data" [period]="period"></app-grid>
+  <hr/>
+  <app-graph [data]="data" [period]="period" [type] = "type"></app-graph>
+</div>

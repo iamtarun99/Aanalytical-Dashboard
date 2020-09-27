@@ -1,0 +1,18 @@
+<div>
+    <h3>Graphical comparison</h3>
+    <div class="chartFilter">
+        <label for="itype">Filter (Industry Type):</label>
+        <select name="itype" id="itype" (change)="changeType($event.target.value)">
+            <option value="all">All</option>
+            <option *ngFor="let a of type" [value]="a">{{a}}</option>
+        </select>
+    </div>
+    <div>
+    <highcharts-chart 
+      [Highcharts]="Highcharts"
+      [(update)]="flag"
+      [options]="chartOptions"
+      style="width: 100%; height: 400px; display: block;"
+    ></highcharts-chart>
+    </div>
+</div>

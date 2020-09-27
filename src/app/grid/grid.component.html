@@ -1,0 +1,10 @@
+<div>
+    <h3>Statistical comparison</h3>
+    <ag-grid-angular id="datatable"
+    class="myGrid ag-theme-alpine"
+    [gridOptions]="gridOptions"
+    [rowData]="data"
+    [columnDefs]="columnDefs"
+    (rowClicked)='onRowClicked($event)'>
+    </ag-grid-angular>
+</div>
